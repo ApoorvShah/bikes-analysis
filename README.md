@@ -14,6 +14,9 @@ A comprehensive data analysis platform for Indian motorcycle market with interac
 - **Interactive Charts**: Customizable scatter plots with intelligent insights
 - **Multiple Rankings**: Performance, VFM, and combined scoring systems
 
+![Motorcycle Value Analysis](bike_value_analysis.png)
+*Sample visualization: Price vs All-rounder Performance scatter plot showing value positioning across different motorcycle segments*
+
 ### 🧠 Intelligent Analysis
 - **Smart Graph Insights**: AI-powered quadrant analysis with contextual explanations
 - **Reference Lines**: Median and 75th percentile thresholds with annotations
