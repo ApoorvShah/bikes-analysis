@@ -1,0 +1,10 @@
+# Core dependencies
+streamlit>=1.49.0
+pandas>=2.0.0
+numpy>=1.24.0
+plotly>=6.0.0
+matplotlib>=3.7.0
+
+# Supporting packages (automatically installed with above)
+altair>=5.0.0
+pyarrow>=10.0.0
