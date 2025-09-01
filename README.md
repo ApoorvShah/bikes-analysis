@@ -9,27 +9,31 @@ A comprehensive data analysis platform for Indian motorcycle market with interac
 ## 🎯 Features
 
 ### 📊 Interactive Dashboard
+
 - **Sortable Data Table**: Complete motorcycle database with 55+ bikes
 - **Dynamic Filtering**: Filter by price range and motorcycle segments
 - **Interactive Charts**: Customizable scatter plots with intelligent insights
 - **Multiple Rankings**: Performance, VFM, and combined scoring systems
 
 ![Motorcycle Value Analysis](bike_value_analysis.png)
-*Sample visualization: Price vs All-rounder Performance scatter plot showing value positioning across different motorcycle segments*
+_Sample visualization: Price vs All-rounder Performance scatter plot showing value positioning across different motorcycle segments_
 
 ### 🧠 Intelligent Analysis
+
 - **Smart Graph Insights**: AI-powered quadrant analysis with contextual explanations
 - **Reference Lines**: Median and 75th percentile thresholds with annotations
 - **Performance Tiers**: Gold/Silver/Bronze classification system
 - **Highlighting Options**: Top 10 performers, VFM champions, and tier-based coloring
 
 ### 🏆 Ranking Systems
+
 1. **Performance Leaders**: Best overall performance scores
 2. **Value Champions**: Highest value-for-money ratings
 3. **Total Overall Score**: Combined performance + VFM scores
 4. **Balanced Rankings**: Average of performance and VFM ranks
 
 ### 📈 Advanced Visualizations
+
 - **Dynamic X/Y Axis Selection**: Choose any metric combination
 - **Contextual Insights**: Graph explanations change based on selected metrics
 - **Threshold Tables**: Lists of bikes above performance thresholds
@@ -38,35 +42,40 @@ A comprehensive data analysis platform for Indian motorcycle market with interac
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Python 3.8+
 - pip package manager
 
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/your-username/motorcycle-analysis-dashboard.git
 cd motorcycle-analysis-dashboard
 ```
 
 2. **Create virtual environment**
+
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
 
 4. **Run the application**
+
 ```bash
 streamlit run bike_app.py
 ```
 
 5. **Open your browser**
-Navigate to `http://localhost:8501`
+   Navigate to `http://localhost:8501`
 
 ## 📁 Project Structure
 
@@ -83,12 +92,16 @@ motorcycle-analysis-dashboard/
 
 ## 🏍️ Motorcycle Database
 
+> DEMO : [server](https://bikes-analysis-lvto8zz6rl8iocxhz6w6ls.streamlit.app/)
+
 ### Coverage
+
 - **55+ motorcycles** across all major brands
 - **Price range**: ₹1.25L to ₹21.10L
 - **Categories**: Entry-level to superbikes
 
 ### Segments
+
 - **Entry-level 150–200cc**: Hero Xtreme, Bajaj Pulsar RS200, Yamaha R15 V4
 - **200-250cc Single**: Hero Karizma XMR, Suzuki Gixxer SF 250
 - **300-400cc Single**: TVS Apache RR 310, BMW G 310 RR, Royal Enfield 350s
@@ -97,6 +110,7 @@ motorcycle-analysis-dashboard/
 - **Superbikes 900cc+**: Hayabusa, Ninja ZX-10R, Ducati Panigale V2
 
 ### Evaluation Metrics
+
 1. **Performance (10 Yrs)**: Long-term satisfaction and reliability
 2. **Comfort (All Ages)**: Ergonomics for different age groups
 3. **City Commute**: Urban traffic and daily usability
@@ -109,11 +123,13 @@ motorcycle-analysis-dashboard/
 ### Dashboard Navigation
 
 #### 📊 Data Table Tab
+
 - **Filter motorcycles** by price range and segments
 - **Sort by any column** to find specific criteria
 - **Export functionality** for further analysis
 
 #### 📈 Interactive Charts Tab
+
 - **Select X and Y axes** from any available metrics
 - **Choose highlighting options**:
   - Top 10 Overall Score
@@ -124,6 +140,7 @@ motorcycle-analysis-dashboard/
 - **View threshold tables** for actionable bike lists
 
 #### 🏆 Rankings Tab
+
 - **Total Overall Score**: Performance + VFM combined
 - **Overall Ranked Bikes**: Balanced ranking system
 - **Top Performance**: Highest scoring motorcycles
@@ -135,12 +152,14 @@ motorcycle-analysis-dashboard/
 ### Key Algorithms
 
 #### VFM Calculation
+
 ```python
 value_raw = df["Total score"] / df["Price (₹ Lakh)"]
 df["VFM score"] = 10 * (value_raw / value_raw.max())
 ```
 
 #### Overall Ranking
+
 ```python
 df['Performance_Rank'] = df['Total (out of 10)'].rank(method='dense', ascending=False)
 df['VFM_Rank'] = df['VFM score'].rank(method='dense', ascending=False)
@@ -148,19 +167,22 @@ df['Overall_Rank'] = (df['Performance_Rank'] + df['VFM_Rank']) / 2
 ```
 
 #### Performance Tiers
+
 - 🥇 **Excellent**: 7.5+ total score
-- 🥈 **Very Good**: 6.5-7.5 total score  
+- 🥈 **Very Good**: 6.5-7.5 total score
 - 🥉 **Good**: 5.5-6.5 total score
 - 📊 **Average**: <5.5 total score
 
 ## 🚀 Deployment
 
 ### Local Development
+
 ```bash
 streamlit run bike_app.py
 ```
 
 ### Streamlit Cloud
+
 1. Push to GitHub repository
 2. Connect to [Streamlit Cloud](https://streamlit.io/cloud)
 3. Deploy with one click
@@ -179,7 +201,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- **Apoorv Shah** - *Initial work*
+- **Apoorv Shah** - _Initial work_
 
 ## 🙏 Acknowledgments
 
